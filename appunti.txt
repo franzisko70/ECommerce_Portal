@@ -1,0 +1,168 @@
+USE [MEXAL_ECOMM]
+GO
+
+/****** Object:  Table [dbo].[GMO_HEADER]    Script Date: 16/09/2019 21:58:06 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GMO_HEADER](
+	[ID] [uniqueidentifier] NOT NULL,
+	[DATA_INS] [datetime] NULL,
+	[FATTURAREA] [char](9) NULL,
+	[DESTINAZIONE] [char](9) NULL,
+	[ANNOMX] [char](4) NULL,
+	[SERIEMX] [int] NULL,
+	[TIPOMX] [char](2) NULL,
+	[NUMEROMX] [int] NULL,
+	[DATAMX] [datetime] NULL,
+	[STATO] [char](1) NULL,
+	[DATA_TRASF] [datetime] NULL,
+	[CODAGE] [char](9) NULL,
+	[TIPOORD] [char](1) NULL,
+	[NOTA1] [varchar](200) NULL,
+	[NOTA2] [varchar](200) NULL,
+	[CONSEGNA] [varchar](50) NULL,
+	[PDFFILE] [varbinary](max) NULL,
+	[MOTIVO] [varchar](200) NULL,
+	[DATA_MOD] [datetime] NULL,
+ CONSTRAINT [PK_GMO_HEADER] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+USE [MEXAL_ECOMM]
+GO
+
+/****** Object:  Table [dbo].[GMO_INCASSI]    Script Date: 16/09/2019 21:58:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GMO_INCASSI](
+	[ID] [uniqueidentifier] NOT NULL,
+	[AGENTE] [char](9) NULL,
+	[CLIENTE] [char](9) NULL,
+	[IMPORTOPAG] [float] NULL,
+	[MODOPAG] [varchar](50) NULL,
+	[TRASFERITO] [int] NULL,
+	[CHIAVE0] [char](12) NULL,
+	[CHIAVE1] [char](12) NULL,
+	[CHIAVE2] [char](12) NULL,
+	[CHIAVE3] [char](12) NULL,
+	[CHIAVE4] [char](12) NULL,
+	[CHIAVE5] [char](12) NULL,
+	[CHIAVE6] [char](12) NULL,
+	[CHIAVE7] [char](12) NULL,
+	[CHIAVE8] [char](12) NULL,
+	[CHIAVE9] [char](12) NULL,
+	[DATA_MOD] [datetime] NULL,
+ CONSTRAINT [PK_GMO_INCASSI] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [MEXAL_ECOMM]
+GO
+
+/****** Object:  Table [dbo].[GMO_LINE]    Script Date: 16/09/2019 21:58:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GMO_LINE](
+	[ID] [uniqueidentifier] NOT NULL,
+	[RIGA] [int] NOT NULL,
+	[ARTICOLO] [char](32) NULL,
+	[UM] [char](2) NULL,
+	[QUANTITA] [float] NULL,
+	[PRLORDO] [float] NULL,
+	[SCONTO1] [float] NULL,
+	[SCONTO2] [float] NULL,
+	[SCONTO3] [float] NULL,
+	[SCONTO4] [float] NULL,
+	[SCONTO5] [float] NULL,
+	[PRNETTO] [float] NULL,
+	[OMAGGIO] [bit] NULL,
+	[DACONS] [bit] NULL,
+	[DAFATT] [bit] NULL,
+ CONSTRAINT [PK_GMO_LINE] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC,
+	[RIGA] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [MEXAL_ECOMM]
+GO
+
+/****** Object:  Table [dbo].[GMO_LINKS]    Script Date: 16/09/2019 21:59:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GMO_LINKS](
+	[ID] [varchar](255) NOT NULL,
+	[PROGR] [int] NOT NULL,
+	[WebLink] [varchar](255) NULL,
+	[Titolo] [varchar](255) NULL
+) ON [PRIMARY]
+GO
+
+USE [MEXAL_ECOMM]
+GO
+
+/****** Object:  Table [dbo].[GMO_LOGINS]    Script Date: 16/09/2019 21:59:31 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GMO_LOGINS](
+	[LOGIN] [nvarchar](255) NOT NULL,
+	[PASSWORD] [nvarchar](255) NULL,
+	[TIPO] [char](1) NULL,
+	[CODCLI] [char](9) NULL,
+	[NOMECLI] [nvarchar](100) NULL,
+	[EMAILCLI] [nvarchar](255) NULL,
+	[CODAGE] [char](9) NULL,
+	[NOMEAGE] [nvarchar](100) NULL,
+	[EMAILAGE] [nvarchar](255) NULL,
+ CONSTRAINT [PK_GMO_LOGINS] PRIMARY KEY CLUSTERED 
+(
+	[LOGIN] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [MEXAL_ECOMM]
+GO
+
+/****** Object:  Table [dbo].[GMO_MENU]    Script Date: 16/09/2019 21:59:41 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GMO_MENU](
+	[TipoUser] [char](1) NULL,
+	[Progr] [int] NULL,
+	[Riga] [varchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+

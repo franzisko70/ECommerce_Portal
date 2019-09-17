@@ -4,7 +4,7 @@ page 50700 "GMO Logins List"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "GMO Logins";
-
+    CardPageId = "GMO Logins Card";
     layout
     {
         area(Content)
@@ -31,6 +31,8 @@ page 50700 "GMO Logins List"
                 {
                     ApplicationArea = All;
                     Caption = 'Customer Code';
+                    Lookup = true;
+                    LookupPageId = "Customer Lookup";
                 }
                 field(CustomerName; CustomerName)
                 {
@@ -46,6 +48,8 @@ page 50700 "GMO Logins List"
                 {
                     ApplicationArea = All;
                     Caption = 'Salesperson Code';
+                    Lookup = true;
+                    LookupPageId = "Salespersons/Purchasers";
                 }
                 field(SalesPName; SalesPName)
                 {

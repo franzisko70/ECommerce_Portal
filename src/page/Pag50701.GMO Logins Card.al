@@ -31,6 +31,8 @@ page 50701 "GMO Logins Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Customer Code';
+                    Lookup = true;
+                    LookupPageId = "Customer Lookup";
                 }
                 field(CustomerName; CustomerName)
                 {
@@ -46,6 +48,8 @@ page 50701 "GMO Logins Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Salesperson Code';
+                    Lookup = true;
+                    LookupPageId = "Salespersons/Purchasers";
                 }
                 field(SalesPName; SalesPName)
                 {

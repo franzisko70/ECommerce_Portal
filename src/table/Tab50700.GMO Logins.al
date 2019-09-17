@@ -1,4 +1,4 @@
-table 50700 GMO_Logins
+table 50700 "GMO Logins"
 {
     DataClassification = ToBeClassified;
     fields

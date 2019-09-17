@@ -1,15 +1,15 @@
-page 50700 GMO_Logins
+page 50701 "GMO Logins Card"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Lists;
-    SourceTable = GMO_Logins;
+    UsageCategory = Administration;
+    SourceTable = "GMO Logins";
 
     layout
     {
         area(Content)
         {
-            repeater(gLogin)
+            group(GroupName)
             {
                 field(Login; Login)
                 {
@@ -57,26 +57,6 @@ page 50700 GMO_Logins
                     ApplicationArea = All;
                     Caption = 'Salesperson Email';
                 }
-            }
-        }
-        area(Factboxes)
-        {
-
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
             }
         }
     }

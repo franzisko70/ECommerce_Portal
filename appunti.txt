@@ -107,18 +107,5 @@ GO
 USE [MEXAL_ECOMM]
 GO
 
-/****** Object:  Table [dbo].[GMO_LINKS]    Script Date: 16/09/2019 21:59:14 ******/
-SET ANSI_NULLS ON
-GO
 
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[GMO_LINKS](
-	[ID] [varchar](255) NOT NULL,
-	[PROGR] [int] NOT NULL,
-	[WebLink] [varchar](255) NULL,
-	[Titolo] [varchar](255) NULL
-) ON [PRIMARY]
-GO
 

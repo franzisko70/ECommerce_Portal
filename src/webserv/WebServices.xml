@@ -1,0 +1,18 @@
+<TenantWebService>
+    <ObjectType>Page</ObjectType>
+    <ObjectID>50700</ObjectID>
+    <ServiceName>Logins</ServiceName>
+    <Published>true</Published>
+</TenantWebService>
+<TenantWebService>
+    <ObjectType>Page</ObjectType>
+    <ObjectID>50702</ObjectID>
+    <ServiceName>Menu</ServiceName>
+    <Published>true</Published>
+</TenantWebService>
+<TenantWebService>
+    <ObjectType>Page</ObjectType>
+    <ObjectID>50703</ObjectID>
+    <ServiceName>Links</ServiceName>
+    <Published>true</Published>
+</TenantWebService>
